@@ -26,12 +26,16 @@ Please follow the instructions below to get started.
 
 ### Installing
 
-Execute the following command to download the source code
-```sh
-git clone https://github.com/BenMcGit/basic-smart-contract.git
-```
+1. Clone the repo
+   ```sh
+   git clone https://github.com/BenMcGit/basic-smart-contract.git
+   ```
+2. Download dependencies
+   ```sh
+   cd basic-smart-contract && npm install
+   ```
 
-### Executing program
+### Executing the program
 
 #### Validate the Smart Contract
 
@@ -67,4 +71,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Acknowledgments
 
-* [Udemy: Ethereum and Solidity: The Complete Developer's Guide](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide)
+* [Udemy - Ethereum and Solidity: The Complete Developer's Guide](https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide)
