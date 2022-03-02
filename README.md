@@ -59,7 +59,7 @@ Ben McAdams - [@benwmcadams](https://twitter.com/benwmcadams) - mcadams.benj@gma
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Acknowledgments
 
