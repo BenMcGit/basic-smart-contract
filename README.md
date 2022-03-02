@@ -4,7 +4,11 @@ A simple demonstration of how to build, compile, and deploy a smart contract to 
 
 ## Description
 
-This projectis my first attempt in learning the intracacies of the Software Development Lifecycle (SDLC) of a Decentralized Application (DApp). Within this project there is a basic definition of a smart contract "Inbox", a script to compile this smart contract into it's ABI and Bytecode, and a script to deploy this to the Rinkeby Etherum Test Network. Please follow the instructions below to get started. 
+This project is my first attempt in developing a Decentralized Application (DApp). 
+
+This source code contains a smart contract called "Inbox", a script to compile this smart contract into it's ABI and Bytecode, and a script to deploy the smart contract to the Rinkeby Ethereum Test Network. 
+
+Please follow the instructions below to get started. 
 
 ## Getting Started
 
@@ -24,7 +28,7 @@ This projectis my first attempt in learning the intracacies of the Software Deve
 
 Execute the following command to download the source code
 ```sh
-git clone TODO
+git clone https://github.com/BenMcGit/basic-smart-contract.git
 ```
 
 ### Executing program
@@ -39,7 +43,7 @@ npm run test
 
 #### Deploying the Smart Contract
 
-> **WARNING**: If this runs successfully, you will use a small amount of ETH on your test account
+> **WARNING**: If this runs successfully, you will 'spend' a small amount of ETH on your Metamask account.
 
 1. Follow the instructions in the .env_COPY_AND_RENAME_ME file
 2. Assure that your Metamask account has a small amount of ETH
