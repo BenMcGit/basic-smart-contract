@@ -1,7 +1,7 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const Web3 = require('web3'); // constructor
-const {interface, bytecode} = require('./compile.js');
+const Web3 = require('web3');
+const { abi, evm } = require('./compile');
 
 const validateEnvVar = (value, name) => {
     let isSet = 'X';
@@ -19,22 +19,18 @@ const provider = new HDWalletProvider(
     process.env.INFURA_ENDPOINT
 );
 const web3 = new Web3(provider);
-
-// require function to call async/awaits
+ 
 const deploy = async () => {
-    const accounts = await web3.eth.getAccounts();
-    const account = accounts[0];
-
-    console.log('Attempting to deploy from account', account);
-
-    const inbox = await new web3.eth.Contract(JSON.parse(interface))
-        .deploy({ data: bytecode, arguments: ['Hi!'] })
-        .send({ gas: '1000000', from: account });
-
-    // manual validation can be done at https://rinkeby.etherscan.io/address/<ADDRESS>
-    console.log('Contract deployed to', inbox.options.address);
-
-    // prevent hanging deployment
-    provider.engine.stop();
+  const accounts = await web3.eth.getAccounts();
+ 
+  console.log('Attempting to deploy from account', accounts[0]);
+ 
+  const result = await new web3.eth.Contract(abi)
+    .deploy({ data: evm.bytecode.object, arguments: ['Hi there!'] })
+    .send({ gas: '1000000', from: accounts[0] });
+ 
+  console.log('Contract deployed to', result.options.address);
+  provider.engine.stop();
 };
+ 
 deploy();
